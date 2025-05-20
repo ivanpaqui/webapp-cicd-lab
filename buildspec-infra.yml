@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+
+  build:
+
+    commands:
+
+      - echo "Desplegando infraestructura..."
+
+      - aws cloudformation deploy --template-file infra/infrastructure.yaml --stack-name WebAppStack --capabilities CAPABILITY_NAMED_IAM
