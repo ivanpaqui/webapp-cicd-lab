@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+
+  install:
+
+    runtime-versions:
+
+      ruby: latest
+
+  build:
+
+    commands:
+
+      - echo "Preparando artefactos para CodeDeploy"
+
+artifacts:
+
+  files:
+
+    - appspec.yml
+
+    - app/**/*
+
+    - scripts/install_dependencies.sh
